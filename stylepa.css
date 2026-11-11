@@ -10,9 +10,9 @@ div.panel {
 /* Cadre principal */
 #PA {
     margin: 15px auto !important;
-    padding: 18px 15px 15px !important;
+    padding: 18px 15px 24px !important;
     width: 890px !important;
-    height: 475px !important;
+    height: auto !important;
     min-height: 365px !important;
     display: flex !important;
     flex-direction: column !important;
@@ -495,6 +495,7 @@ display: block !important;
     display: flex !important;
     flex-direction: column !important;
     overflow: visible !important;
+    min-width: 0 !important;
     padding-bottom: 6px !important;
     z-index: 5 !important;
     flex-grow: 1 !important;
@@ -579,7 +580,8 @@ display: block !important;
 
 /* === PARTIE INFÉRIEURE (Partenaires sur 2 lignes + Staff agrandi) === */
 #PAbas {
-margin-top: 14px !important;
+margin-top: 18px !important;
+width: 100% !important;
 margin-left: 0 !important;
 height: 130px !important;
 display: flex !important;
@@ -599,7 +601,7 @@ top: -16px !important;
 left: 14px !important;
 font-size: 24px !important;
 color: #1e1e20 !important;
-text-shadow: -1.5px -1.5px 0 #f4efe6, 1.5px -1.5px 0 #f4efe6, -1.5px 1.5px 0 #f4efe6, 1.5px 1.5px 0 #f4efe6, 0 3px 6px rgba(0, 0, 0, 0.6) !important;
+text-shadow: -1px -1px 0 #f4efe6, 1px -1px 0 #f4efe6, -1px 1px 0 #f4efe6, 1px 1px 0 #f4efe6, 0 3px 6px rgba(0, 0, 0, 0.6) !important;
 z-index: 10 !important;
 pointer-events: none !important;
 }
