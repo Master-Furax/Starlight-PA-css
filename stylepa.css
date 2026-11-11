@@ -242,6 +242,17 @@ div.panel {
     padding: 8px !important;
     position: relative !important;
 }
+/* === TITRE "PRÉDÉFINIS" AU-DESSUS DU BLOC DROIT === */
+#PApredef h2 {
+    position: absolute !important;
+    top: -15px !important;
+    left: 14px !important;
+    font-size: 24px !important;
+    color: #1e1e20 !important;
+    text-shadow: -1.5px -1.5px 0 #f4efe6, 1.5px -1.5px 0 #f4efe6, -1.5px 1.5px 0 #f4efe6, 1.5px 1.5px 0 #f4efe6, 0 3px 6px rgba(0, 0, 0, 0.6) !important;
+    z-index: 10 !important;
+    pointer-events: none !important;
+}
 
 #PApredef a.PAplus-predef {
     position: absolute !important;
