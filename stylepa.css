@@ -112,8 +112,9 @@ div.panel {
 
 /* Bloc Actualité (Cartouche beige style QEEL) */
 #PAactu {
-    height: 128px !important;
+    height: 155px !important;
     width: 100% !important;
+    margin-bottom:-32px;
     box-sizing: border-box !important;
     background: #d8d2c7 !important;
     color: #1e1e20 !important;
