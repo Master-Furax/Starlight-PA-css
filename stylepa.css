@@ -10,7 +10,7 @@ div.panel {
 /* Cadre principal */
 #PA {
     margin: 15px auto !important;
-    padding: 18px 15px 24px !important;
+    padding: 18px 15px 18px !important;
     width: 890px !important;
     height: auto !important;
     min-height: 365px !important;
@@ -351,6 +351,8 @@ a.PAplus-predef:hover {
     border: 1px solid #9e988e !important;
     border-radius: 14px 0 !important;
     padding: 6px 0 !important;
+    margin-left: -6px !important;
+    margin-right: 6px !important;
     margin-bottom: 0 !important;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5) !important;
     position: relative !important;
@@ -579,7 +581,7 @@ display: block !important;
 
 /* === PARTIE INFÉRIEURE (Partenaires sur 2 lignes + Staff agrandi) === */
 #PAbas {
-margin-top: 26px !important;
+margin-top: 34px !important;
 width: 100% !important;
 margin-left: 0 !important;
 height: 130px !important;
