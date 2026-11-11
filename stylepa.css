@@ -519,6 +519,51 @@ display: block !important;
     text-overflow: ellipsis !important;
 }
 
+.PA-track-header {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    gap: 8px !important;
+    width: 100% !important;
+}
+
+.PA-track-time {
+    font-size: 10px !important;
+    color: #9e988e !important;
+    font-family: monospace !important;
+    white-space: nowrap !important;
+}
+#PA-progress-bar {
+    width: 100% !important;
+    height: 4px !important;
+    background: rgba(255, 255, 255, 0.15) !important;
+    border-radius: 3px !important;
+    margin-top: 6px !important;
+    position: relative !important;
+    overflow: visible !important;
+}
+
+#PA-progress-fill {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #9d2b6b 0%, #d89b3c 100%) !important;
+    border-radius: 3px !important;
+    position: relative !important;
+    transition: width 0.25s linear !important;
+}
+.PA-progress-star {
+    position: absolute !important;
+    right: -7px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    color: #d89b3c !important;
+    font-size: 13px !important;
+    line-height: 1 !important;
+    text-shadow: 0 0 6px rgba(216, 155, 60, 0.9), 0 0 2px #ffffff !important;
+    pointer-events: none !important;
+}
+
+
 /* Masquage de l'iframe YouTube tout en gardant le son actif */
 #PAyt-player {
     position: absolute !important;
