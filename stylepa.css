@@ -376,9 +376,10 @@ display: block !important;
 /* === LECTEUR MUSICAL PERSONNALISÉ STYLE QEEL (#PAmusique) === */
 #PAmusique {
     width: 100% !important;
-    height: 62px !important;
+    height: 70px !important;
     box-sizing: border-box !important;
-    display: flex !important;
+    display: flex !important;    
+    margin-bottom: -27px;
     align-items: center !important;
     gap: 10px !important;
     padding: 0 12px !important;
