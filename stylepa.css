@@ -18,7 +18,7 @@ div.panel {
     flex-direction: column !important;
     justify-content: space-between !important;
     background-color: #1e1e20 !important;
-    background-image: none !important;
+    background-image: radial-gradient(circle at 53% 55%, #2b242c 0%, #19191c 75%) !important;
     background-size: cover !important;
     background-position: center 45% !important;
     border: 2px solid #9e988e !important;
