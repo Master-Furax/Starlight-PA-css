@@ -113,7 +113,7 @@ div.panel {
 #PAactu {
     height: 128px !important;
     width: 100% !important;
-    margin: auto 0 !important;
+    margin: 18px 0 0 0 !important;
     box-sizing: border-box !important;
     background: #d8d2c7 !important;
     color: #1e1e20 !important;
@@ -412,6 +412,7 @@ display: block !important;
 #PAmusique {
     width: 100% !important;
     height: 85px !important;
+    margin: 16px 0 0 0 !important;
     box-sizing: border-box !important;
     display: flex !important;  
     align-items: center !important;
