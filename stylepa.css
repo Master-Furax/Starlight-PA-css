@@ -328,9 +328,9 @@ a.PAplus-predef:hover {
     object-fit: cover !important;
 }
 
-/* === COLONNE VERTICALE "VOTEZ" AU CENTRE (ZONE ROUGE) === */
+/* === COLONNE VERTICALE "VOTE" AU CENTRE === */
 #PAts {
-    width: 34px !important;
+    width: 44px !important;
     height: 155px !important;
     box-sizing: border-box !important;
     display: flex !important;
@@ -343,7 +343,31 @@ a.PAplus-predef:hover {
     padding: 6px 0 !important;
     margin-bottom: 0 !important;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5) !important;
-    z-index: 12 !important;}
+    position: relative !important;
+    z-index: 12 !important;
+}
+
+/* Petit titre latéral "VOTE" sur la tranche droite */
+#PAts .PAts-titre {
+    position: absolute !important;
+    right: -14px !important;
+    top: 50% !important;
+    transform: translateY(-50%) rotate(90deg) !important;
+    background: linear-gradient(90deg, #9d2b6b, #d89b3c) !important;
+    color: #ffffff !important;
+    font-family: var(--titres, 'Teko', 'Arial Narrow', sans-serif) !important;
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1.5px !important;
+    line-height: 1 !important;
+    padding: 2px 8px !important;
+    border: 1px solid #f4efe6 !important;
+    border-radius: 4px !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6) !important;
+    pointer-events: none !important;
+    white-space: nowrap !important;
+}
 
 #PAts a {
 display: flex !important;
