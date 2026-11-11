@@ -7,7 +7,7 @@ div.panel {
     color: inherit !important;
 }
 
-/* Cadre principal avec le Trou Noir tamisé */
+/* Cadre principal */
 #PA {
     margin: 15px auto !important;
     padding: 18px 15px 15px !important;
@@ -494,7 +494,8 @@ display: block !important;
 #PAmusique-info {
     display: flex !important;
     flex-direction: column !important;
-    overflow: hidden !important;
+    overflow: visible !important;
+    padding-bottom: 6px !important;
     z-index: 5 !important;
     flex-grow: 1 !important;
 }
