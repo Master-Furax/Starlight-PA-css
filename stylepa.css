@@ -114,7 +114,7 @@ div.panel {
 #PAactu {
     height: 155px !important;
     width: 100% !important;
-    margin-bottom:-32px;
+    margin-bottom:-32px !important;
     box-sizing: border-box !important;
     background: #d8d2c7 !important;
     color: #1e1e20 !important;
