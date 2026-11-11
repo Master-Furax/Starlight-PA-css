@@ -12,7 +12,7 @@ div.panel {
     margin: 15px auto !important;
     padding: 18px 15px 15px !important;
     width: 890px !important;
-    height: 440px !important;
+    height: 475px !important;
     min-height: 365px !important;
     display: flex !important;
     flex-direction: column !important;
@@ -22,7 +22,7 @@ div.panel {
     background-size: cover !important;
     background-position: center 45% !important;
     border: 2px solid #9e988e !important;
-    border-radius: 18px !important;
+    border-radius: 27px 0 !important;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.65) !important;
     position: relative !important;
     box-sizing: border-box !important;
@@ -376,10 +376,10 @@ display: block !important;
 /* === LECTEUR MUSICAL PERSONNALISÉ STYLE QEEL (#PAmusique) === */
 #PAmusique {
     width: 100% !important;
-    height: 70px !important;
+    height: 85px !important;
     box-sizing: border-box !important;
     display: flex !important;    
-    margin-bottom: -27px;
+    margin-bottom: -36px;
     align-items: center !important;
     gap: 10px !important;
     padding: 0 12px !important;
@@ -657,7 +657,7 @@ font-size: 11.5px !important;
 /* Chat cosmique centré au milieu de la PA */
 #PAchat {
 position: absolute !important;
-top: 60% !important;
+top: 57% !important;
 left: 53% !important;
 bottom: auto !important;
 right: auto !important;
