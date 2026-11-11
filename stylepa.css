@@ -112,7 +112,7 @@ div.panel {
 
 /* Bloc Actualité (Cartouche beige style QEEL) */
 #PAactu {
-    height: 155px !important;
+    height: 128px !important;
     width: 100% !important;
     margin-bottom:-32px !important;
     box-sizing: border-box !important;
@@ -414,8 +414,7 @@ display: block !important;
     width: 100% !important;
     height: 85px !important;
     box-sizing: border-box !important;
-    display: flex !important;    
-    margin-bottom: -36px;
+    display: flex !important;  
     align-items: center !important;
     gap: 10px !important;
     padding: 0 12px !important;
@@ -580,7 +579,7 @@ display: block !important;
 
 /* === PARTIE INFÉRIEURE (Partenaires sur 2 lignes + Staff agrandi) === */
 #PAbas {
-margin-top: 18px !important;
+margin-top: 26px !important;
 width: 100% !important;
 margin-left: 0 !important;
 height: 130px !important;
