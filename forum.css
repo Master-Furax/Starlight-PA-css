@@ -1,0 +1,531 @@
+/* ==========================================================================
+   STARLIGHT CONVERGENCE - FEUILLE DE STYLE PRINCIPALE (forum.css)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. VARIABLES GLOBALES, FOND DU FORUM & SCROLLBAR DÉGRADÉE
+   -------------------------------------------------------------------------- */
+:root {
+    --font: 'Oswald', sans-serif;
+    --textes: 'Roboto', sans-serif;
+    --titres: 'Teko', sans-serif;
+    --bg-dark: #1e1e20;
+    --bg-panel: #141416;
+    --border-cream: #f4efe6;
+    --border-grey: #9e988e;
+    --gold: #d89b3c;
+    --plum: #9d2b6b;
+    --grad-main: linear-gradient(90deg, #4e386a 0%, #ee5574 50%, #ffb01f 100%);
+    --grad-btn: linear-gradient(90deg, #9d2b6b, #d89b3c);
+    --link: #d98a09;
+    --link-hover: #945dca;
+}
+
+body#modernbb {
+    margin-top: 85px !important;
+    padding-top: 0 !important;
+    font-family: var(--font);
+    background-color: #28282b !important;
+    color: #f4efe6;
+}
+
+#wrap {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    width: 1000px !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+}
+
+/* Bannière collée juste sous la toolbar (zéro bande noire) */
+div#page-header,
+div.headerbar,
+div#site-desc,
+a#logo,
+a#logo img {
+    background: transparent !important;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    height: auto !important;
+    min-height: 0 !important;
+}
+
+a#logo img {
+    width: 100% !important;
+    display: block !important;
+}
+
+div#site-desc p,
+div#site-title {
+    display: none !important;
+}
+
+/* Scrollbar personnalisée unique (prune -> doré) */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background: #141416;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #9d2b6b, #d89b3c);
+    border-radius: 4px;
+}
+
+/* --------------------------------------------------------------------------
+   2. TOOLBAR SUPÉRIEURE, AVATAR HEXAGONAL & PANNEAU MEMBRE
+   -------------------------------------------------------------------------- */
+div#fa_toolbar {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 85px !important;
+    background: var(--grad-main) !important;
+    border-bottom: 1px solid var(--border-cream) !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.65) !important;
+    font-family: var(--font) !important;
+    z-index: 900 !important;
+}
+
+/* Masque la flèche et les icônes inutiles de Forumactif */
+#fa_hide, #fa_show, a#fa_hide, a#fa_show, .fa_hide, .fa_show,
+#fa_toolbar #fa_right #fa_hide, #fa_toolbar #fa_right #fa_show,
+#fa_toolbar #fa_icon, #fa_toolbar #fa_search {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    width: 0 !important;
+    height: 0 !important;
+}
+
+/* Avatar hexagonal en haut à gauche */
+div#avatarco {
+    position: fixed !important;
+    top: 22px !important;
+    left: 22px !important;
+    width: 143px !important;
+    height: 125px !important;
+    background: linear-gradient(270deg, #4e386a, #ee5574, #ffb01f) !important;
+    clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%) !important;
+    z-index: 999 !important;
+}
+
+div#avatarco div {
+    position: fixed !important;
+    top: 27px !important;
+    left: 27px !important;
+    width: 133px !important;
+    height: 115px !important;
+    clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%) !important;
+    z-index: 999 !important;
+}
+
+div#avatarco div img {
+    width: 133px !important;
+    height: 115px !important;
+    object-fit: cover !important;
+}
+
+/* Titre "Bienvenue [Pseudo]" sans rectangle blanc au clic */
+div#fa_menu {
+    position: fixed !important;
+    top: 30px !important;
+    left: 175px !important;
+    z-index: 999 !important;
+    pointer-events: auto !important;
+}
+
+#fa_toolbar #fa_menu,
+#fa_toolbar #fa_menu:hover,
+#fa_toolbar #fa_menu.fa_clicked,
+#fa_toolbar #fa_menu a#fa_welcome,
+#fa_toolbar #fa_menu:hover a#fa_welcome,
+#fa_toolbar #fa_menu.fa_clicked a#fa_welcome {
+    background: transparent !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+a#fa_welcome {
+    font-family: var(--titres) !important;
+    font-size: 24px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.8px !important;
+    color: var(--bg-dark) !important;
+    text-shadow: -1px -1px 0 var(--border-cream), 1px -1px 0 var(--border-cream), -1px 1px 0 var(--border-cream), 1px 1px 0 var(--border-cream) !important;
+    text-decoration: none !important;
+    max-width: none !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+}
+
+#fa_menu:hover a#fa_welcome,
+#fa_menu.fa_clicked a#fa_welcome {
+    color: var(--gold) !important;
+    text-shadow: -1px -1px 0 var(--bg-dark), 1px -1px 0 var(--bg-dark), -1px 1px 0 var(--bg-dark), 1px 1px 0 var(--bg-dark), 0 0 8px rgba(216, 155, 60, 0.85) !important;
+}
+
+/* Panneau déroulant "Bienvenue" */
+ul#fa_menulist {
+    position: absolute !important;
+    top: 38px !important;
+    left: 0 !important;
+    width: 340px !important;
+    min-height: 250px !important;
+    height: auto !important;
+    padding: 14px 14px 14px 175px !important;
+    background: var(--bg-dark) !important;
+    border: 1px solid var(--border-grey) !important;
+    border-radius: 27px 0 !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.85) !important;
+    list-style: none !important;
+    z-index: 999 !important;
+}
+
+#fa_usermenu {
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    width: 165px !important;
+    padding: 14px 10px !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    background: rgba(20, 20, 22, 0.9) !important;
+    border-right: 1px solid var(--border-grey) !important;
+    border-radius: 27px 0 0 0 !important;
+}
+
+#fa_usermenu img {
+    width: 105px !important;
+    height: 135px !important;
+    object-fit: cover !important;
+    border-radius: 14px 0 !important;
+    border: 1px solid var(--border-cream) !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7) !important;
+    margin-bottom: 6px !important;
+}
+
+#fa_usermenu > a,
+#fa_usermenu > a:link,
+#fa_usermenu > a:visited,
+#fa_usermenu > a span,
+#fa_usermenu strong,
+#fa_usermenu b,
+#fa_ranktitle {
+    display: block !important;
+    width: 100% !important;
+    max-width: 145px !important;
+    white-space: normal !important;
+    overflow: visible !important;
+    text-align: center !important;
+    font-family: var(--titres) !important;
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    line-height: 1.2 !important;
+    margin: 4px auto !important;
+    color: var(--gold) !important;
+    -webkit-text-fill-color: var(--gold) !important;
+    background: transparent !important;
+}
+
+#fa_usermenu table {
+    width: auto !important;
+    margin: 4px auto 0 !important;
+    border-collapse: collapse !important;
+}
+
+#fa_usermenu td {
+    display: table-cell !important;
+    width: auto !important;
+    padding: 1px 2px !important;
+    font-size: 13px !important;
+    color: var(--gold) !important;
+    -webkit-text-fill-color: var(--gold) !important;
+}
+
+#fa_menulist li a {
+    display: block !important;
+    color: var(--border-cream) !important;
+    -webkit-text-fill-color: var(--border-cream) !important;
+    background: transparent !important;
+    font-family: var(--font) !important;
+    font-size: 13px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    line-height: 26px !important;
+    padding: 2px 8px !important;
+    border-bottom: 1px solid rgba(158, 152, 142, 0.2) !important;
+    border-radius: 6px 0 !important;
+    text-decoration: none !important;
+    transition: background 0.2s ease, padding-left 0.2s ease !important;
+}
+
+#fa_menulist li a:hover {
+    background: linear-gradient(90deg, rgba(157, 43, 107, 0.55), rgba(216, 155, 60, 0.55)) !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    padding-left: 12px !important;
+}
+
+/* --------------------------------------------------------------------------
+   3. NOTIFICATIONS, CONNEXION & S'ENREGISTRER (DROITE)
+   -------------------------------------------------------------------------- */
+div#fa_right {
+    position: fixed !important;
+    top: 26px !important;
+    right: 22px !important;
+    margin: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    z-index: 999 !important;
+    pointer-events: auto !important;
+}
+
+#fa_right #fa_notifications,
+#fa_toolbar > #fa_right.notification > #fa_notifications,
+#fa_right a.rightHeaderLink {
+    display: inline-block !important;
+    background: var(--bg-dark) !important;
+    color: var(--border-cream) !important;
+    -webkit-text-fill-color: var(--border-cream) !important;
+    border: 1px solid var(--border-cream) !important;
+    border-radius: 10px 0 !important;
+    padding: 4px 14px !important;
+    font-family: var(--titres) !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.8px !important;
+    text-decoration: none !important;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.6) !important;
+    transition: background 0.2s ease, transform 0.2s ease !important;
+}
+
+#fa_right #fa_notifications:hover,
+#fa_toolbar > #fa_right.notification > #fa_notifications:hover,
+#fa_right a.rightHeaderLink:hover {
+    background: var(--grad-btn) !important;
+    color: #ffffff !important;
+-webkit-text-fill-color: #ffffff !important;
+transform: translateY(-1px) !important;
+}
+/* Liste déroulante des notifications + croix de suppression */
+ul#notif_list,
+#fa_toolbar #fa_right #notif_list {
+position: absolute !important;
+top: 38px !important;
+right: 0 !important;
+left: auto !important;
+width: 290px !important;
+background: var(--bg-dark) !important;
+border: 1px solid var(--border-grey) !important;
+border-radius: 18px 0 !important;
+box-shadow: 0 8px 22px rgba(0, 0, 0, 0.85) !important;
+padding: 8px !important;
+z-index: 1005 !important;
+}
+#fa_toolbar #fa_right #notif_list li {
+position: relative !important;
+background: transparent !important;
+color: var(--border-cream) !important;
+-webkit-text-fill-color: var(--border-cream) !important;
+font-size: 12px !important;
+padding: 6px 28px 6px 8px !important;
+border-bottom: 1px solid rgba(158, 152, 142, 0.2) !important;
+}
+#fa_toolbar #fa_right #notif_list li a.delete {
+display: flex !important;
+justify-content: center !important;
+align-items: center !important;
+position: absolute !important;
+top: 8px !important;
+right: 6px !important;
+width: 16px !important;
+height: 16px !important;
+background: var(--grad-btn) !important;
+color: #ffffff !important;
+-webkit-text-fill-color: #ffffff !important;
+border: 1px solid var(--border-cream) !important;
+border-radius: 4px 0 !important;
+font-size: 11px !important;
+font-weight: bold !important;
+text-decoration: none !important;
+}
+#fa_toolbar #fa_right #notif_list li a.delete::before {
+content: "×" !important;
+line-height: 1 !important;
+}
+#fa_toolbar #fa_right #notif_list li.see_all {
+background: var(--grad-btn) !important;
+border-radius: 8px 0 !important;
+margin-top: 6px !important;
+padding: 6px !important;
+text-align: center !important;
+border-bottom: none !important;
+}
+#fa_toolbar #fa_right #notif_list li.see_all a {
+color: #ffffff !important;
+-webkit-text-fill-color: #ffffff !important;
+font-weight: bold !important;
+}
+/* --------------------------------------------------------------------------
+4. MENU DE NAVIGATION CENTRÉ & MENU DÉROULANT "NAVIGATION"
+-------------------------------------------------------------------------- */
+#headerbar-top,
+.is-sticky#headerbar-top,
+.is-sticky#headerbar-top.w-toolbar {
+position: fixed !important;
+top: 26px !important;
+left: 380px !important;
+right: 185px !important;
+width: auto !important;
+max-width: none !important;
+margin: 0 !important;
+padding: 0 !important;
+display: flex !important;
+justify-content: center !important;
+align-items: center !important;
+background: transparent !important;
+border: none !important;
+box-shadow: none !important;
+z-index: 950 !important;
+pointer-events: auto !important;
+}
+#headerbar-top .wrap,
+#headerbar-top .wrap > ul,
+#headerbar-top ul.navbar-nav {
+display: inline-flex !important;
+flex-direction: row !important;
+align-items: center !important;
+justify-content: center !important;
+gap: 2px !important;
+width: auto !important;
+margin: 0 !important;
+padding: 0 !important;
+list-style: none !important;
+background: transparent !important;
+border: none !important;
+box-shadow: none !important;
+}
+/* Supprime tout trou causé par des  vides */
+#headerbar-top li:empty {
+display: none !important;
+}
+#headerbar-top .wrap > ul > li,
+#headerbar-top ul.navbar-nav > li,
+#headerbar-top .wrap > ul > li:last-child,
+#headerbar-top ul.navbar-nav > li:last-child {
+float: none !important;
+position: relative !important;
+top: 0 !important;
+left: auto !important;
+right: auto !important;
+margin: 0 !important;
+padding: 0 !important;
+display: inline-flex !important;
+align-items: center !important;
+width: auto !important;
+border: none !important;
+background: transparent !important;
+}
+.navbar a,
+#headerbar-top a,
+#headerbar-top .wrap ul li a {
+font-family: var(--titres) !important;
+font-size: 24px !important;
+font-weight: 700 !important;
+color: var(--bg-dark) !important;
+text-shadow: -1px -1px 0 var(--border-cream), 1px -1px 0 var(--border-cream), -1px 1px 0 var(--border-cream), 1px 1px 0 var(--border-cream) !important;
+background: transparent !important;
+background-color: transparent !important;
+box-shadow: none !important;
+border: none !important;
+padding: 4px 7px !important;
+white-space: nowrap !important;
+text-decoration: none !important;
+transition: color 0.2s ease !important;
+}
+.navbar a:hover,
+#headerbar-top a:hover,
+#headerbar-top .wrap ul li a:hover,
+#headerbar-top .wrap ul li:hover > a {
+color: var(--gold) !important;
+text-shadow: -1px -1px 0 var(--bg-dark), 1px -1px 0 var(--bg-dark), -1px 1px 0 var(--bg-dark), 1px 1px 0 var(--bg-dark), 0 0 10px rgba(244, 239, 230, 0.85) !important;
+background: transparent !important;
+background-color: transparent !important;
+box-shadow: none !important;
+}
+/* Sous-menu déroulant "Navigation" */
+#headerbar-top .wrap ul li:last-child ul {
+display: none !important;
+position: absolute !important;
+top: 100% !important;
+right: 0 !important;
+left: auto !important;
+width: 185px !important;
+background: var(--bg-dark) !important;
+border: 1px solid var(--border-grey) !important;
+border-top: 3px solid var(--gold) !important;
+border-radius: 18px 0 !important;
+box-shadow: 0 8px 22px rgba(0, 0, 0, 0.85) !important;
+padding: 8px !important;
+margin: 0 !important;
+list-style: none !important;
+z-index: 999 !important;
+}
+#headerbar-top .wrap ul li:last-child:hover ul {
+display: block !important;
+}
+#headerbar-top .wrap ul li:last-child ul li {
+width: 100% !important;
+display: block !important;
+}
+#headerbar-top .wrap ul li:last-child ul li a {
+display: block !important;
+width: 100% !important;
+box-sizing: border-box !important;
+background: transparent !important;
+color: var(--border-cream) !important;
+text-shadow: none !important;
+font-size: 17px !important;
+font-weight: 500 !important;
+letter-spacing: 1px !important;
+text-align: center !important;
+padding: 5px 8px !important;
+border-bottom: 1px solid rgba(158, 152, 142, 0.2) !important;
+border-radius: 8px 0 !important;
+}
+#headerbar-top .wrap ul li:last-child ul li:last-child a {
+border-bottom: none !important;
+}
+#headerbar-top .wrap ul li:last-child ul li a:hover {
+background: var(--grad-btn) !important;
+color: #ffffff !important;
+text-shadow: none !important;
+}
+/* Adaptation écran réduit */
+@media screen and (max-width: 1350px) {
+#headerbar-top,
+.is-sticky#headerbar-top,
+.is-sticky#headerbar-top.w-toolbar {
+left: 340px !important;
+right: 175px !important;
+}
+.navbar a,
+#headerbar-top a,
+#headerbar-top .wrap ul li a {
+font-size: 19px !important;
+padding: 4px 5px !important;
+}
+}
